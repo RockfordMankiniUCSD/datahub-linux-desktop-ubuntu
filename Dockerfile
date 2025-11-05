@@ -14,13 +14,21 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 
 RUN apt-get -y install htop
+dbus-x11 \
+xfce4 \
+xfce4-panel \
+xfce4-session \
+xfce4-settings \
+xorg \
+xubuntu-icon-theme \
+tigervnc-standalone-server \
 
 # 3) install packages using notebook user
 USER jovyan
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy
+RUN pip install --no-cache-dir networkx scipy jupyter-remote-desktop-proxy
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
