@@ -13,15 +13,15 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN apt-get -y install htop
-dbus-x11 \
-xfce4 \
-xfce4-panel \
-xfce4-session \
-xfce4-settings \
-xorg \
-xubuntu-icon-theme \
-tigervnc-standalone-server \
+RUN apt-get -y install htop \
+  dbus-x11 \
+  xfce4 \
+  xfce4-panel \
+  xfce4-session \
+  xfce4-settings \
+  xorg \
+  xubuntu-icon-theme \
+  tigervnc-standalone-server
 
 # 3) install packages using notebook user
 USER jovyan
