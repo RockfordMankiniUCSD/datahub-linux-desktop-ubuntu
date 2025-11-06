@@ -21,7 +21,8 @@ RUN apt-get update && apt-get -y install htop \
   xfce4-settings \
   xorg \
   xubuntu-icon-theme \
-  tigervnc-standalone-server
+  tigervnc-standalone-server \
+  firefox
 
 # 3) install packages using notebook user
 USER jovyan
